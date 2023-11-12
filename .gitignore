@@ -9,6 +9,9 @@
 [Ii]mport/
 [Pp]ackages/
 
+# User Settings 
+UserSettings/
+
 # Project settings
 ProjectSettings/
 [Aa]ssembly-[Cc]sharp-Editor*.vscode
