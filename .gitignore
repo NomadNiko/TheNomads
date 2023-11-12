@@ -12,8 +12,6 @@
 # User Settings 
 UserSettings/
 
-# Project settings
-ProjectSettings/
 [Aa]ssembly-[Cc]sharp-Editor*.vscode
 [Aa]ssembly-[Cc]sharp-Editor*.csproj
 [Aa]ssembly-[Cc]sharp-Editor*.sln
