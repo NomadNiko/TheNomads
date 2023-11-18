@@ -9,11 +9,17 @@ public class CharacterMovement : MonoBehaviour {
     private int isWalkingHash;
     private int isAttackingHash;
 
+    private int comboNumHash;
+    
     private PlayerInput input;
     private Vector2 currentMovement;
     private bool movementPressed;
     private bool runPressed;
     private bool isAttacking;
+
+    private int comboNum = 0;
+    private float lastAttack = 0.0f;
+    private float comboAllowance = 2f;
     private float moveSpeed = 15f;
     private float runMultiplier = 1.5f;
     private float attackTime = 1f;
@@ -34,6 +40,7 @@ public class CharacterMovement : MonoBehaviour {
         isWalkingHash = Animator.StringToHash("isWalking");
         isRunningHash = Animator.StringToHash("isRunning");
         isAttackingHash = Animator.StringToHash("isAttacking");
+        comboNumHash = Animator.StringToHash("comboNum");
     }
 
     private void FixedUpdate() {
@@ -121,6 +128,14 @@ public class CharacterMovement : MonoBehaviour {
             // Set the character to be attacking
             isAttacking = true;
 
+            //Check if the player has attacked fast enough to get a combo, if not reset
+            if (Time.time - lastAttack > comboAllowance){
+                comboNum = 0;
+            }
+            lastAttack = Time.time;
+            animator.SetInteger(comboNumHash, comboNum);
+            comboNum = (comboNum + 1) % 3;
+            
             // Call EndAttack after the expected duration of the attack animation
             Invoke("EndAttack", attackTime);
         }
