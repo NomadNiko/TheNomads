@@ -6,6 +6,8 @@ public class HitBoxAttack : MonoBehaviour
 {
 
     private bool canAttack;
+    public int comboNum;
+    [SerializeField] private float[] damage = new float[3] {10,10,15};
 
     private void OnEnable(){
         canAttack = true;

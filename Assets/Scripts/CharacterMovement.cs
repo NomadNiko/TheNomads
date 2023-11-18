@@ -24,13 +24,18 @@ public class CharacterMovement : MonoBehaviour {
     private float runMultiplier = 1.5f;
     private float attackTime = 1f;
 
+
     [SerializeField] private GameObject hitbox;
+    private HitBoxAttack hitboxScript;
     private Rigidbody rb;
 
     private void Awake() {
         // Initialize input and rigidbody
         input = new PlayerInput();
         rb = GetComponent<Rigidbody>();
+
+        // Initialize hitbox script so we can pass it values
+        hitboxScript = hitbox.GetComponent<HitBoxAttack>();
 
         HandleInput();
     }
@@ -134,11 +139,16 @@ public class CharacterMovement : MonoBehaviour {
                 comboNum = 0;
             }
             lastAttack = Time.time;
+
+            // Activate Hitbox
+            hitbox.SetActive(true);
+            // Tell the hitbox which attack is being used
+            hitboxScript.comboNum = comboNum;
+
+            // Iterate combo number and trigger proper animation
             animator.SetInteger(comboNumHash, comboNum);
             comboNum = (comboNum + 1) % 3;
             
-            // Activate Hitbox
-            hitbox.SetActive(true);
             // Call EndAttack after the expected duration of the attack animation
             Invoke("EndAttack", attackTime);
         }
