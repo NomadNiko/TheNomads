@@ -24,6 +24,7 @@ public class CharacterMovement : MonoBehaviour {
     private float runMultiplier = 1.5f;
     private float attackTime = 1f;
 
+    [SerializeField] private GameObject hitbox;
     private Rigidbody rb;
 
     private void Awake() {
@@ -136,6 +137,8 @@ public class CharacterMovement : MonoBehaviour {
             animator.SetInteger(comboNumHash, comboNum);
             comboNum = (comboNum + 1) % 3;
             
+            // Activate Hitbox
+            hitbox.SetActive(true);
             // Call EndAttack after the expected duration of the attack animation
             Invoke("EndAttack", attackTime);
         }
@@ -144,6 +147,9 @@ public class CharacterMovement : MonoBehaviour {
     private void EndAttack() {
         // Reset the attacking state
         isAttacking = false;
+
+        //Disable Hitbox
+        hitbox.SetActive(false);
 
         // Reset the isAttacking parameter in the animator to false
         animator.SetBool(isAttackingHash, false);
