@@ -53,6 +53,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""c5dab5db-21c3-41b7-b5d5-7d295f9df629"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -220,6 +229,28 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Attack_A"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9df6eef6-5070-4fc2-ae34-984a391b1080"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7fcbe42c-2a01-4d51-bd68-293df80b3748"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -231,6 +262,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_CharacterControls_Movement = m_CharacterControls.FindAction("Movement", throwIfNotFound: true);
         m_CharacterControls_Run = m_CharacterControls.FindAction("Run", throwIfNotFound: true);
         m_CharacterControls_Attack_A = m_CharacterControls.FindAction("Attack_A", throwIfNotFound: true);
+        m_CharacterControls_Interact = m_CharacterControls.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -295,6 +327,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_CharacterControls_Movement;
     private readonly InputAction m_CharacterControls_Run;
     private readonly InputAction m_CharacterControls_Attack_A;
+    private readonly InputAction m_CharacterControls_Interact;
     public struct CharacterControlsActions
     {
         private @PlayerInput m_Wrapper;
@@ -302,6 +335,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_CharacterControls_Movement;
         public InputAction @Run => m_Wrapper.m_CharacterControls_Run;
         public InputAction @Attack_A => m_Wrapper.m_CharacterControls_Attack_A;
+        public InputAction @Interact => m_Wrapper.m_CharacterControls_Interact;
         public InputActionMap Get() { return m_Wrapper.m_CharacterControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -320,6 +354,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Attack_A.started += instance.OnAttack_A;
             @Attack_A.performed += instance.OnAttack_A;
             @Attack_A.canceled += instance.OnAttack_A;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
         }
 
         private void UnregisterCallbacks(ICharacterControlsActions instance)
@@ -333,6 +370,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Attack_A.started -= instance.OnAttack_A;
             @Attack_A.performed -= instance.OnAttack_A;
             @Attack_A.canceled -= instance.OnAttack_A;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
         }
 
         public void RemoveCallbacks(ICharacterControlsActions instance)
@@ -355,5 +395,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnAttack_A(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
 }
