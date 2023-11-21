@@ -744,6 +744,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297046405}
   m_CullTransparentMesh: 1
+--- !u!1 &1454575118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2838850415429382975, guid: c4fec55e85acc8b419cb9ede3e84e148,
+    type: 3}
+  m_PrefabInstance: {fileID: 351113408}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1502595276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4365,6 +4371,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VendingMachine
       objectReference: {fileID: 0}
+    - target: {fileID: 8452543013380536452, guid: b727d88c08008cd43b4040b3ff7baceb,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1454575118}
     - target: {fileID: 8452543013380536452, guid: b727d88c08008cd43b4040b3ff7baceb,
         type: 3}
       propertyPath: pauseMenu

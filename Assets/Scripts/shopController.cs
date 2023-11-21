@@ -42,12 +42,12 @@ public class shopController : MonoBehaviour
         //populate the shop with the items determined in the shopObject;
     }
 
+    // Make the selected Item green
     public void SelectRow(int button){
         ChangeColour(new Color(255,255,255));
         selected[0] = button;
         ChangeColour(new Color(0,255,0));
         UpdateDisplay();
-
     }
 
     public void SelectColumn(int button){

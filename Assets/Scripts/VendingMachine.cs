@@ -7,8 +7,10 @@ public class VendingMachine : MonoBehaviour
     // Start is called before the first frame update
     public int itemCount = 4;
     public List<int> usedSlots = new List<int>();
+
+    private float detectRange = 10.0f;
     [SerializeField] private GameObject pauseMenu;
-    [SerializeField] public GameObject player; //Will need this to check proximity so only opens when we mean it to
+    [SerializeField] private GameObject player; //Will need this to check proximity so only opens when we mean it to
     void Start()
     {
         for (int i=0; i < itemCount; i++){ //Create the items when the scene is created so that opening and closing the shop doesnt change whats in it
@@ -23,8 +25,11 @@ public class VendingMachine : MonoBehaviour
         
     }
 
+    // Open when the interact button is pressed (currently E)
     void OnInteract()
     {
-        pauseMenu.SetActive(!pauseMenu.activeInHierarchy);
+        if (Vector3.Distance(player.transform.position, transform.position) < detectRange || pauseMenu.activeInHierarchy){
+            pauseMenu.SetActive(!pauseMenu.activeInHierarchy);
+        }
     }
 }
