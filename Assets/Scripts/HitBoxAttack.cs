@@ -14,7 +14,7 @@ public class HitBoxAttack : MonoBehaviour
     }
 
     //TODO: Pull damage from player, will change per attack in the combo, and deal damage to what is collided with
-    private void OnTriggerEnter(Collider other){
+    private void OnTriggerEnter(Collider collider){
         if (canAttack) {
             Debug.Log ("hit");
         }
