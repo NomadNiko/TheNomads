@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PanHitBox : MonoBehaviour
+public class HitBox : MonoBehaviour
 {
     public bool canDamage;
     // Start is called before the first frame update

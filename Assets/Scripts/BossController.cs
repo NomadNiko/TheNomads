@@ -17,7 +17,7 @@ public class BossController : MonoBehaviour
     private Animation anim;
 
     //Firework Properties
-    private float travelTime = 2.0f;
+    private float travelTime = 5.0f;
     //Attacking Properties
     private float attackCd = 3.0f;
     private float lastAttack = 0.0f;
@@ -30,8 +30,7 @@ public class BossController : MonoBehaviour
         anim = pan.GetComponent<Animation>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Always look at player without tilting, TODO make it so it pauses in it during other attacks
         Quaternion targetRotation = Quaternion.LookRotation(new Vector3(player.transform.position.x, 0, player.transform.position.z));
@@ -48,11 +47,6 @@ public class BossController : MonoBehaviour
             }
             lastAttack = Time.time;
         }
-    }
-
-    void FixedUpdate()
-    {
-        
     }
 
     //Shoot firework at specified target position
@@ -74,6 +68,6 @@ public class BossController : MonoBehaviour
     //Start pan slam animation, maybe not the best way to do this, open to redoing it if wanted
     void PanSlam(){
         anim.Play("PanSlam");
-        pan.GetComponent<PanHitBox>().canDamage = true;
+        pan.GetComponent<HitBox>().canDamage = true;
     }
 }
