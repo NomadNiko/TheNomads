@@ -64,6 +64,7 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
         return currentHealth;
     }
 
+
     private void HandleDeath() {
         Debug.Log("The object is dead.");
         OnDeath.Invoke();
