@@ -423,6 +423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97890a6695419d544ad14dd5a0276a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 15
+  speedBuffScript: {fileID: 0}
   hitbox: {fileID: 5030375178983237198}
 --- !u!136 &3232771607825840195
 CapsuleCollider:
@@ -443,10 +445,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.9020083
-  m_Height: 7.5586257
+  m_Radius: 2.2751355
+  m_Height: 8.067852
   m_Direction: 1
-  m_Center: {x: 0, y: 3.927787, z: 0.16042113}
+  m_Center: {x: 0.11012268, y: 3.673174, z: 0.16192245}
 --- !u!54 &2041100613647132197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -472,7 +474,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &2850475549564194948
 GameObject:
