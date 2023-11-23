@@ -1,6 +1,3 @@
-// 2023-11-22 AI-Tag 
-// This was created with assistance from Muse, a Unity Artificial Intelligence product
-
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -23,6 +20,10 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
     public float currentHealth;
     public State state;
 
+    // Regeneration parameters
+    public bool canRegenerate = false;
+    public float regenerationRate = 5f;
+
     // Declare events to signal state changes
     public UnityEvent OnDeath;
     public UnityEvent OnSpawn;
@@ -30,6 +31,14 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
     private void Start() {
         currentHealth = maxHealth;
         SetState(State.PreSpawn);
+    }
+
+    private void Update() {
+        // Regenerate health over time
+        if (canRegenerate && state == State.Alive) {
+            currentHealth += regenerationRate * Time.deltaTime;
+            currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
+        }
     }
 
     public void TakeDamage(float amount = 25) {
@@ -64,7 +73,6 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
         return currentHealth;
     }
 
-
     private void HandleDeath() {
         Debug.Log("The object is dead.");
         OnDeath.Invoke();
@@ -81,7 +89,6 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
     }
 
     private void HandleStateActions() {
-
         switch (state) {
             case State.PreSpawn:
                 break;
