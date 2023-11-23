@@ -268,50 +268,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2041100613647132197, guid: c4fec55e85acc8b419cb9ede3e84e148,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2041100613647132197, guid: c4fec55e85acc8b419cb9ede3e84e148,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 2041100613647132197, guid: c4fec55e85acc8b419cb9ede3e84e148,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 116
-      objectReference: {fileID: 0}
     - target: {fileID: 2838850415429382975, guid: c4fec55e85acc8b419cb9ede3e84e148,
         type: 3}
       propertyPath: m_Name
       value: LeFishe
-      objectReference: {fileID: 0}
-    - target: {fileID: 3232771607825840195, guid: c4fec55e85acc8b419cb9ede3e84e148,
-        type: 3}
-      propertyPath: m_Height
-      value: 8.067852
-      objectReference: {fileID: 0}
-    - target: {fileID: 3232771607825840195, guid: c4fec55e85acc8b419cb9ede3e84e148,
-        type: 3}
-      propertyPath: m_Radius
-      value: 2.2751355
-      objectReference: {fileID: 0}
-    - target: {fileID: 3232771607825840195, guid: c4fec55e85acc8b419cb9ede3e84e148,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 0.11012268
-      objectReference: {fileID: 0}
-    - target: {fileID: 3232771607825840195, guid: c4fec55e85acc8b419cb9ede3e84e148,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 3.673174
-      objectReference: {fileID: 0}
-    - target: {fileID: 3232771607825840195, guid: c4fec55e85acc8b419cb9ede3e84e148,
-        type: 3}
-      propertyPath: m_Center.z
-      value: 0.16192245
       objectReference: {fileID: 0}
     - target: {fileID: 4420885839227229387, guid: c4fec55e85acc8b419cb9ede3e84e148,
         type: 3}
