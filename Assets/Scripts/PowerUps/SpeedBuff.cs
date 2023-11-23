@@ -13,6 +13,7 @@ namespace PowerUps
         {
             if (other.CompareTag("Player"))
             {
+                Debug.Log("Picked Up");
                 StartCoroutine(Pickup(other));
             }
         }
@@ -36,7 +37,6 @@ namespace PowerUps
             hasSpeedBoost = false;
             
             Destroy(gameObject);
-            Debug.Log("Picked Up");
         }
     }
 }

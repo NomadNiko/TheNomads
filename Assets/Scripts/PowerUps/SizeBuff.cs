@@ -3,15 +3,22 @@ using UnityEngine;
 
 namespace PowerUps
 {
-    public class PowerUp : MonoBehaviour
+    public class SizeBuff : MonoBehaviour
     {
         public float powerUpDuration = 4;
         public float sizeMultiplier = 1.7f;
+        public bool hasSizeBuff;
         public GameObject pickupEffect;
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
             {
+                PlayerCollisionHandler playerHandler = other.GetComponent<PlayerCollisionHandler>();
+                if (playerHandler != null)
+                {
+                    playerHandler.SetSizeBuff(true);
+                }
+                Debug.Log("Picked Up");
                 StartCoroutine(Pickup(other));
             }
         }
@@ -23,6 +30,7 @@ namespace PowerUps
             
             //Effect Of PowerUp
             player.transform.localScale *= sizeMultiplier;
+            hasSizeBuff = true;
             
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<Collider>().enabled = false;
@@ -30,10 +38,11 @@ namespace PowerUps
             yield return new WaitForSeconds(powerUpDuration);
 
             player.transform.localScale /= sizeMultiplier;
+            hasSizeBuff = false;
 
             Destroy(gameObject);
-            Debug.Log("Picked Up");
         }
+        
     }
 }
 
