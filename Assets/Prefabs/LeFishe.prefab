@@ -439,9 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9731be189ea17042bcea061804a298a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yOffset: 0
-  zOffset: 0
-  forwardOffset: 4
+  forwardOffset: 5
   upwardOffset: 4
   sideOffset: 0
 --- !u!136 &3232771607825840195
@@ -492,7 +490,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 100
   m_CollisionDetection: 0
 --- !u!65 &-8743644286597322490
 BoxCollider:

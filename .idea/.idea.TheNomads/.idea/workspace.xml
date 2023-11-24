@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8902e87-6806-4673-bfe6-1881d737fdee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LeFishe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LeFishe.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickup/PickupDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup/PickupDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700736288240</updated>
       <workItem from="1700736292493" duration="6268000" />
-      <workItem from="1700825327963" duration="9212000" />
+      <workItem from="1700825327963" duration="13898000" />
     </task>
     <servers />
   </component>

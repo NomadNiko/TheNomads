@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Pickup
@@ -7,12 +10,13 @@ namespace Pickup
     {
         // This will store the currently detected pickup-able object
         private GameObject _currentPickupObject;
-
         private GameObject _objectToHold;
         
         public float forwardOffset = 2.0f;
         public float upwardOffset = 1.0f;
         public float sideOffset = 0.5f;
+        
+        private bool hasEnteredTrigger = false;
         
             //DEBUG STATEMENTS
             /*(private void Update()
@@ -29,19 +33,19 @@ namespace Pickup
         }*/
 
 
-        private void OnTriggerEnter(Collider other)
-        {
-            // Check if the collided object has the "Pickup-able" tag
-            if (other.gameObject.CompareTag("GameController"))
+            private void OnTriggerEnter(Collider other)
             {
-                _currentPickupObject = other.gameObject;
-                Debug.Log("detected pickup-able object");
-                PickUp();
-                //add more logic here if needed, like highlighting the object
+                // Check if the collided object has the "Pickup-able" tag
+                if (other.gameObject.CompareTag("PickupAble") && !hasEnteredTrigger)
+                {
+                    _currentPickupObject = other.gameObject;
+                    PickUp();
+                    hasEnteredTrigger = true;
+                    //add more logic here if needed, like highlighting the object
+                }
             }
-        }
 
-        private void OnTriggerExit(Collider other)
+            private void OnTriggerExit(Collider other)
         {
             // Check if the leaving object is the currently detected pickup-able object
             if (other.gameObject == _currentPickupObject)
@@ -53,7 +57,7 @@ namespace Pickup
         
         private void PickUp()
         {
-            if (_currentPickupObject != null)
+            if (_currentPickupObject != null && _objectToHold == null) // Check if _objectToHold is not already assigned
             {
                 // Instantiate the pickup object
                 _objectToHold = Instantiate(_currentPickupObject, Vector3.zero, Quaternion.identity);
@@ -69,18 +73,61 @@ namespace Pickup
                 // Disable physics on the pickup-able object
                 if (_objectToHold.TryGetComponent(out Rigidbody rb))
                 {
-                    rb.isKinematic = true; // Makes the object not be affected by physics
+                    rb.isKinematic = false; // Makes the object not be affected by physics
                     rb.useGravity = false; // Disables gravity
                 }
-
-                // Additional logic as needed...
-
-                // Debug the local position of the pickup object
-                Debug.Log($"Local position of pickup object after pickup: {_objectToHold.transform.localPosition}");
 
                 // Deactivate the original pickup object (optional)
                 _currentPickupObject.SetActive(false);
             }
         }
+        
+        
+        private float _throwTimer = 3.0f; // Set the timer duration (3 seconds in this case)
+        private bool _isThrowing = false;
+
+        private void Start()
+        {
+            // Start the timer when the object is picked up
+            _isThrowing = true;
+        }
+
+        private void Update()
+        {
+            if (_isThrowing)
+            {
+                _throwTimer -= Time.deltaTime;
+                if (_throwTimer <= 0)
+                {
+                    ThrowObject();
+                    _isThrowing = false; // Prevent further throwing
+                }
+            }
+        }
+
+
+        
+        private void ThrowObject()
+        {
+            if (_objectToHold != null)
+            {
+                // Detach the object from the player
+                _objectToHold.transform.parent = null;
+
+                // Get the Rigidbody component of the object
+                if (_objectToHold.TryGetComponent(out Rigidbody rb))
+                {
+                    // Apply a forward force to simulate throwing (adjust the force value as needed)
+                    float throwForce = 10.0f; // Adjust this value as needed
+                    rb.AddForce(transform.forward * throwForce, ForceMode.Impulse);
+                }
+
+                // Set objectToHold to null since it's no longer held
+                _objectToHold = null;
+            }
+        }
+
+        
+
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ShopItem
   - Ground
+  - PickupAble
   layers:
   - Default
   - TransparentFX
