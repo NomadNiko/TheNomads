@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8902e87-6806-4673-bfe6-1881d737fdee" name="Changes" comment="" />
+    <list default="true" id="f8902e87-6806-4673-bfe6-1881d737fdee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LeFishe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LeFishe.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,9 +25,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PowerUps/SpeedBuff.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.9/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2YZbwBWgdFfNA4jONhAXuy8Mgyt" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,7 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "powerups",
+    "git-widget-placeholder": "throwables",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -95,6 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700736288240</updated>
       <workItem from="1700736292493" duration="6268000" />
+      <workItem from="1700825327963" duration="9212000" />
     </task>
     <servers />
   </component>
