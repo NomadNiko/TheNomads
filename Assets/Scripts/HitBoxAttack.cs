@@ -16,7 +16,12 @@ public class HitBoxAttack : MonoBehaviour {
         health = GetComponentInParent<Health>();
     }
 
+<<<<<<< HEAD
     private void OnTriggerEnter(Collider collider) {
+=======
+    //TODO: Pull damage from player, will change per attack in the combo, and deal damage to what is collided with
+    private void OnTriggerEnter(Collider collider){
+>>>>>>> origin/dev
         if (canAttack) {
             Debug.Log("hit");
 
