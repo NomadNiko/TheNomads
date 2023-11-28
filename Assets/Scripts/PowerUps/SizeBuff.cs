@@ -18,7 +18,7 @@ namespace PowerUps
                 {
                     playerHandler.SetSizeBuff(true);
                 }
-                Debug.Log("Picked Up");
+                //Debug.Log("Picked Up");
                 StartCoroutine(Pickup(other));
             }
         }
