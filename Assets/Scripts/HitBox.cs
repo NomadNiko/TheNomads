@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-<<<<<<< HEAD
 public class HitBox : MonoBehaviour {
     public bool canDamage;
     public bool isComplete;
@@ -42,28 +41,5 @@ public class HitBox : MonoBehaviour {
     // Must be int, boolean does not work with animation events
     private void AnimStatus(int status) {
         isComplete = (status == 1);
-=======
-public class HitBox : MonoBehaviour
-{
-    public bool canDamage;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    //TODO: Make this do damage when we have a healtth setup
-    private void OnTriggerEnter(Collider collider){
-        if (canDamage && collider.gameObject.tag=="Player") {
-            Debug.Log ("hitplayer");
-            canDamage = false;
-        }
-        
->>>>>>> origin/dev
     }
 }
