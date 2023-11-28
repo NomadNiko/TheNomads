@@ -18,6 +18,7 @@ public class BossController : MonoBehaviour {
     private float travelTime = 5.0f;
     private float attackCd = 3.0f;
     private float lastAttack = 0.0f;
+    private float panAttackDamage = 20f;
     private bool movementLock = false;
 
     void Start() {
@@ -30,7 +31,7 @@ public class BossController : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        if (!movementLock) {
+        if (!movementLock && player != null) {
             Quaternion targetRotation = Quaternion.LookRotation(new Vector3(player.transform.position.x, 0, player.transform.position.z));
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
 
@@ -39,12 +40,12 @@ public class BossController : MonoBehaviour {
             }
         }
 
-        if (Time.time - lastAttack > attackCd) {
+        if (Time.time - lastAttack > attackCd && player != null) {
             int chosenAttack = Random.Range(0, 2);
             if (chosenAttack == 1) {
                 ShootFirework(player.transform.position);
             } else {
-                PanSlam();
+                StartCoroutine(PanSlamCoroutine());
             }
             lastAttack = Time.time;
         }
@@ -63,7 +64,7 @@ public class BossController : MonoBehaviour {
     void ShootFirework(Vector3 target) {
         Rigidbody projectile = Instantiate(firework, transform.position, transform.rotation);
         GameObject tempWarning = Instantiate(warning, target + new Vector3(0, 0.1f, 0), transform.rotation);
-        projectile.gameObject.GetComponent<FireWork>().warning = tempWarning;
+        projectile.gameObject.GetComponent<FireworkAttack>().warning = tempWarning;
 
         Vector3 travelVector = target - transform.position;
 
@@ -75,8 +76,20 @@ public class BossController : MonoBehaviour {
         // health.TakeDamage(damageAmount);
     }
 
-    void PanSlam() {
+    IEnumerator PanSlamCoroutine() {
         anim.Play("PanSlam");
+
+        // Wait for X seconds before applying damage
+        yield return new WaitForSeconds(1.5f);
+
+        // Check if the player has a Health component
+        Health playerHealth = player.GetComponent<Health>();
+        if (playerHealth != null) {
+            // Apply damage to the player
+            playerHealth.TakeDamage(panAttackDamage); // Adjust the damage amount as needed
+        }
+
         panHitBox.canDamage = true;
     }
 }
+

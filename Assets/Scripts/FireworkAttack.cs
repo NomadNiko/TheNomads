@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireWork : MonoBehaviour {
+public class FireworkAttack : MonoBehaviour {
     // Properties, feel free to change as we balance
     public float damage = 10;
     public float explosionDamage = 20; // Define explosion damage here

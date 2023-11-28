@@ -151,7 +151,7 @@ public class CharacterMovement : MonoBehaviour {
             Invoke("EndAttack", attackTime);
 
             // Apply damage to self (for testing purposes)
-            health.TakeDamage(10f);
+            //health.TakeDamage(10f);
         }
     }
 

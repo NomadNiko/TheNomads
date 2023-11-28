@@ -2,18 +2,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
-    [SerializeField] private GameObject player;
     [SerializeField] private BossController boss;
     [SerializeField] private GameOverUI gameOverUI;
 
     void Update() {
+        // Find the player GameObject in the scene
+        GameObject player = GameObject.FindWithTag("Player");
+
         // Check player health and trigger game over if it's zero
-        if (player.GetComponent<Health>().currentHealth <= 0) {
+        if (player != null && player.GetComponent<Health>() != null && player.GetComponent<Health>().currentHealth <= 0) {
             GameOver();
         }
 
         // Check boss health and destroy if it's zero
-        if (boss != null && boss.GetComponent<Health>().currentHealth <= 0) {
+        if (boss != null && boss.GetComponent<Health>() != null && boss.GetComponent<Health>().currentHealth <= 0) {
             DestroyBoss();
         }
     }

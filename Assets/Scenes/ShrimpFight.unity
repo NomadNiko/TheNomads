@@ -623,6 +623,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2041100613647132197, guid: c4fec55e85acc8b419cb9ede3e84e148,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 2838850415429382975, guid: c4fec55e85acc8b419cb9ede3e84e148,
         type: 3}
       propertyPath: m_Name
@@ -1499,6 +1504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1919416109}
+  - component: {fileID: 1919416110}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1521,6 +1527,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1919416110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919416108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1677e381797b44399a5b5659b1fa0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 1385620976}
+  gameOverUI: {fileID: 1505618703}
 --- !u!1 &2006302677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,9 +1759,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d91e2416766c644ea1f95429553ae52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartContainer: {fileID: 102887371}
-  heartPrefab: {fileID: 7079218208814127513, guid: 4589475d437337c44a179b0f01ff6e83,
+  healthHeartImagePrefab: {fileID: 7079218208814127513, guid: 4589475d437337c44a179b0f01ff6e83,
     type: 3}
+  container: {fileID: 102887371}
+  playersHealth: {fileID: 918799644}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

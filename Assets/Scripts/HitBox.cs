@@ -5,7 +5,7 @@ using UnityEngine;
 public class HitBox : MonoBehaviour {
     public bool canDamage;
     public bool isComplete;
-    public float explosionDamage; // Added variable for explosion damage
+    public float explosionDamage = 20; // Added variable for explosion damage
 
     // Start is called before the first frame update
     void Start() {
