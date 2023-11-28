@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,7 +8,7 @@ public class CharacterMovement : MonoBehaviour {
     private int isAttackingHash;
 
     private int comboNumHash;
-    
+
     private PlayerInput input;
     private Vector2 currentMovement;
     private bool movementPressed;
@@ -24,18 +22,19 @@ public class CharacterMovement : MonoBehaviour {
     private float runMultiplier = 1.5f;
     private float attackTime = 1f;
 
-
     [SerializeField] private GameObject hitbox;
     private HitBoxAttack hitboxScript;
+    private Health health;  // Add reference to Health script
     private Rigidbody rb;
 
     private void Awake() {
-        // Initialize input and rigidbody
+        // Initialize input, rigidbody, and hitbox script
         input = new PlayerInput();
         rb = GetComponent<Rigidbody>();
-
-        // Initialize hitbox script so we can pass it values
         hitboxScript = hitbox.GetComponent<HitBoxAttack>();
+
+        // Add the following line to initialize the Health script
+        health = GetComponent<Health>();
 
         HandleInput();
     }
@@ -56,7 +55,6 @@ public class CharacterMovement : MonoBehaviour {
     }
 
     private void HandleInput() {
-
         // Movement input handling
         input.CharacterControls.Movement.performed += ctx => {
             currentMovement = ctx.ReadValue<Vector2>();
@@ -134,8 +132,8 @@ public class CharacterMovement : MonoBehaviour {
             // Set the character to be attacking
             isAttacking = true;
 
-            //Check if the player has attacked fast enough to get a combo, if not reset
-            if (Time.time - lastAttack > comboAllowance){
+            // Check if the player has attacked fast enough to get a combo, if not reset
+            if (Time.time - lastAttack > comboAllowance) {
                 comboNum = 0;
             }
             lastAttack = Time.time;
@@ -148,9 +146,12 @@ public class CharacterMovement : MonoBehaviour {
             // Iterate combo number and trigger proper animation
             animator.SetInteger(comboNumHash, comboNum);
             comboNum = (comboNum + 1) % 3;
-            
+
             // Call EndAttack after the expected duration of the attack animation
             Invoke("EndAttack", attackTime);
+
+            // Apply damage to self (for testing purposes)
+            health.TakeDamage(10f);
         }
     }
 
@@ -158,7 +159,7 @@ public class CharacterMovement : MonoBehaviour {
         // Reset the attacking state
         isAttacking = false;
 
-        //Disable Hitbox
+        // Disable Hitbox
         hitbox.SetActive(false);
 
         // Reset the isAttacking parameter in the animator to false

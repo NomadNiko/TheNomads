@@ -30,7 +30,7 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
 
     private void Start() {
         currentHealth = maxHealth;
-        SetState(State.PreSpawn);
+        SetState(State.Alive);
     }
 
     private void Update() {
