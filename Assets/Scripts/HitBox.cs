@@ -42,4 +42,5 @@ public class HitBox : MonoBehaviour {
     private void AnimStatus(int status) {
         isComplete = (status == 1);
     }
+
 }
