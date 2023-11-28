@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using PowerUps;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,9 +21,12 @@ public class CharacterMovement : MonoBehaviour {
     private int comboNum = 0;
     private float lastAttack = 0.0f;
     private float comboAllowance = 2f;
-    private float moveSpeed = 15f;
+    public float moveSpeed = 15f;
     private float runMultiplier = 1.5f;
     private float attackTime = 1f;
+
+    public SpeedBuff speedBuffScript;
+    
 
 
     [SerializeField] private GameObject hitbox;
@@ -113,11 +117,11 @@ public class CharacterMovement : MonoBehaviour {
             animator.SetBool(isWalkingHash, false);
         }
 
-        if (movementMagnitude > 0 && runPressed && !isRunning) {
+        if (movementMagnitude > 0 && (runPressed) && !isRunning) {
             animator.SetBool(isRunningHash, true);
         }
 
-        if ((movementMagnitude == 0 || !runPressed) && isRunning) {
+        if ((movementMagnitude == 0 || (!runPressed)) && isRunning) {
             // If not moving or not pressing run, transition to walk
             animator.SetBool(isRunningHash, false);
         }
