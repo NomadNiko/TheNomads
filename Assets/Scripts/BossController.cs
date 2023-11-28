@@ -10,31 +10,41 @@ public class BossController : MonoBehaviour
     [SerializeField] private GameObject warning;
     [SerializeField] private GameObject player;
     //Movement properites
-    private float rotationSpeed = 0.5f;
+    private float rotationSpeed = 1f;
+    private float moveSpeed = 2.2f;
 
     //Pan Slam Properties
     private GameObject pan;
     private Animation anim;
+    private HitBox panHitBox;
 
     //Firework Properties
     private float travelTime = 5.0f;
     //Attacking Properties
     private float attackCd = 3.0f;
     private float lastAttack = 0.0f;
-
+    private bool movementLock = false;
 
     // Start is called before the first frame update
     void Start()
     {
         pan = GameObject.Find("Pan");
+        panHitBox = pan.GetComponent<HitBox>();
         anim = pan.GetComponent<Animation>();
     }
 
     void FixedUpdate()
     {
-        //Always look at player without tilting, TODO make it so it pauses in it during other attacks
-        Quaternion targetRotation = Quaternion.LookRotation(new Vector3(player.transform.position.x, 0, player.transform.position.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime*rotationSpeed);
+        if (!movementLock){
+            //Always look at player without tilting
+           Quaternion targetRotation = Quaternion.LookRotation(new Vector3(player.transform.position.x, 0, player.transform.position.z));
+           transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime*rotationSpeed);
+
+            //Slowly walk towards the player if he is facing kinda close to them
+            if (Quaternion.Angle(transform.rotation, targetRotation)<20){
+                transform.Translate(Vector3.forward*moveSpeed*Time.deltaTime);
+            }
+        }
 
         //Attack every x seconds, can update in the future if there is a better practice
         //TODO: Add more variation, maybe make fireworks also a pattern where we shoot 4 or 5
@@ -47,9 +57,13 @@ public class BossController : MonoBehaviour
             }
             lastAttack = Time.time;
         }
+
+        //Unlock movement once the animation completes
+        movementLock = !panHitBox.isComplete;
     }
 
     //Shoot firework at specified target position
+    //Do we want this to cause movement lock? I dont think so
     void ShootFirework(Vector3 target){
         //Create instances of prefabs
         Rigidbody projectile = Instantiate(firework, transform.position, transform.rotation);
@@ -67,7 +81,9 @@ public class BossController : MonoBehaviour
 
     //Start pan slam animation, maybe not the best way to do this, open to redoing it if wanted
     void PanSlam(){
+        //movementLock = true;
         anim.Play("PanSlam");
-        pan.GetComponent<HitBox>().canDamage = true;
+        //Set hitbox properties
+        panHitBox.canDamage = true;
     }
 }
