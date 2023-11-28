@@ -5,7 +5,7 @@ public class PlayerCollisionHandler : MonoBehaviour
 {
     public void Update()
     {
-        Debug.Log(_hasSizeBuff);
+        //Debug.Log(_hasSizeBuff);
     }
 
     private bool _hasSizeBuff;
@@ -14,7 +14,7 @@ public class PlayerCollisionHandler : MonoBehaviour
     {
         if (_hasSizeBuff && collision.gameObject.CompareTag("Enemy")) // Assuming your enemies have the tag "Enemy"
         {
-            Debug.Log("is colliding");
+            //Debug.Log("is colliding");
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             if (enemy != null)
             {
