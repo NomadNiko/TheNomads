@@ -38,7 +38,6 @@ namespace Pickup
             {
                     _currentPickupObject = other.gameObject;
                     _isNearPickupable = true;
-                    Debug.Log("can pick up");
                     //add more logic here if needed, like highlighting the object
             }
         }
@@ -50,7 +49,6 @@ namespace Pickup
             {
                 _currentPickupObject = null;
                 _isNearPickupable = false;
-                Debug.Log("CANNOT pick up");
                 // logic when the object is no longer in range can go here
             }
         }
@@ -90,6 +88,13 @@ namespace Pickup
         {
             if (_objectToHold != null)
             {
+                // Check if the object is a molotov and enable its collision logic
+                MolotovFire molotovScript = _objectToHold.GetComponent<MolotovFire>();
+                if (molotovScript != null)
+                {
+                    molotovScript.EnableCollisionLogic();
+                    Debug.Log("can blow up");
+                }
                 // Re-enable the collider
                 Collider component = _objectToHold.GetComponent<Collider>();
                 if (component != null) component.enabled = true;
