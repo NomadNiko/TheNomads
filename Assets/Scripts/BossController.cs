@@ -22,7 +22,7 @@ public class BossController : MonoBehaviour {
     private bool movementLock = false;
 
     void Start() {
-        pan = GameObject.Find("Pan");
+        pan = GameObject.Find("Wok");
         panHitBox = pan.GetComponent<HitBox>();
         anim = pan.GetComponent<Animation>();
 
