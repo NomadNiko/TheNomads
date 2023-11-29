@@ -45,7 +45,7 @@ public class BossController : MonoBehaviour {
             if (chosenAttack == 1) {
                 ShootFirework(player.transform.position);
             } else {
-                StartCoroutine(PanSlamCoroutine());
+                PanSlam();
             }
             lastAttack = Time.time;
         }
@@ -76,18 +76,8 @@ public class BossController : MonoBehaviour {
         // health.TakeDamage(damageAmount);
     }
 
-    IEnumerator PanSlamCoroutine() {
+    void PanSlam() {
         anim.Play("PanSlam");
-
-        // Wait for X seconds before applying damage
-        yield return new WaitForSeconds(1.5f);
-
-        // Check if the player has a Health component
-        Health playerHealth = player.GetComponent<Health>();
-        if (playerHealth != null) {
-            // Apply damage to the player
-            playerHealth.TakeDamage(panAttackDamage); // Adjust the damage amount as needed
-        }
 
         panHitBox.canDamage = true;
     }
