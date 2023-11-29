@@ -6,47 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f8902e87-6806-4673-bfe6-1881d737fdee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/big knife/asset data/big knife.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/accessories/big knife/asset data/big knife.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/big pot/asset data/big pot.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/accessories/big pot/asset data/big pot.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/cutting board/asset data/cutting board.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/accessories/cutting board/asset data/cutting board.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/scale/asset data/scale.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/accessories/scale/asset data/scale.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/small knife/asset data/small knife.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/accessories/small knife/asset data/small knife.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/small pot/asset data/sauce pan.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/accessories/small pot/asset data/sauce pan.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/spoon/asset data/spoon.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/accessories/spoon/asset data/spoon.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/fridge/asset data/fridge.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/fridge/asset data/fridge.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/oven/asset data/oven.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/oven/asset data/oven.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/sink/asset data/sink.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/sink/asset data/sink.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/table/asset data/table.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/table/asset data/table.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/table/table_final.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/table/table_final.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/RedPowerup.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/RedPowerup.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LeFishe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LeFishe.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PowerUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PowerUp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BluePowerUp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BluePowerUp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestEnemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestEnemy.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/DebrisParticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/DebrisParticle.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Dust.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Dust.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Embers.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Embers.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/EnergyExplosion.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/EnergyExplosion.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/EnergyShockwave.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/EnergyShockwave.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Explosion.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Explosion.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/ExplosionDistortion.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/ExplosionDistortion.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/FireExplosion.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/FireExplosion.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Flame03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Flame03.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Flame04.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Flame04.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/LargeFlame01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/LargeFlame01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/LargeFlame02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/LargeFlame02.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Lightning.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Lightning.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/MediumFlame01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/MediumFlame01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/MediumFlame02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/MediumFlame02.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/MediumFlame03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/MediumFlame03.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/PlasmaExplosion.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/PlasmaExplosion.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/SandParticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/SandParticle.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/SmokeDark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/SmokeDark.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/TinyFlame.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/TinyFlame.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/fireball.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/fireball.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +23,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/RangedEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Fire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Molotov.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pickup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -144,7 +112,7 @@
       <workItem from="1700825327963" duration="13898000" />
       <workItem from="1701091191008" duration="3236000" />
       <workItem from="1701139201173" duration="3363000" />
-      <workItem from="1701274916878" duration="2181000" />
+      <workItem from="1701274916878" duration="8354000" />
     </task>
     <servers />
   </component>
