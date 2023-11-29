@@ -57,9 +57,10 @@ public class shopController : MonoBehaviour
         UpdateDisplay();
     }
 
-    public void OnSubmit(){
-        Debug.Log(shopItems[selected[0],selected[1]].name);
-        //Give Item, subtract currency or pass onto vending machine object that is actually determing the items and has their data
+    public void OnSubmit() {
+        Debug.Log(shopItems[selected[0], selected[1]].name);
+        // Call OnInteract in the VendingMachine script
+        GetComponent<VendingMachine>().OnInteract();
     }
 
     private void ChangeColour(Color color){
