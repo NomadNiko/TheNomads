@@ -105,6 +105,8 @@ MonoBehaviour:
   warning: {fileID: 0}
   explosion: {fileID: 5325329558277610943, guid: 15da2fc0a18dca74a94d0b3f86ab2559,
     type: 3}
+  smallExplosion: {fileID: 1828176872806910, guid: f3c1d4a2d90383a47abb8add645a4b47,
+    type: 3}
 --- !u!54 &1955188387811528424
 Rigidbody:
   m_ObjectHideFlags: 0
