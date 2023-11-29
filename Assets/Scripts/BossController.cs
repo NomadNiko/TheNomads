@@ -77,6 +77,7 @@ public class BossController : MonoBehaviour {
     }
 
     void PanSlam() {
+        //TODO: Make the boss stop during the telegraph and make it faster
         anim.Play("PanSlam");
 
         panHitBox.canDamage = true;
