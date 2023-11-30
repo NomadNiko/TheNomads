@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8902e87-6806-4673-bfe6-1881d737fdee" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BluePowerUp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BluePowerUp.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestEnemy.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestEnemy.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-    </list>
+    <list default="true" id="f8902e87-6806-4673-bfe6-1881d737fdee" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +103,7 @@
       <workItem from="1700825327963" duration="13898000" />
       <workItem from="1701091191008" duration="3236000" />
       <workItem from="1701139201173" duration="3363000" />
-      <workItem from="1701274916878" duration="8354000" />
+      <workItem from="1701274916878" duration="8579000" />
     </task>
     <servers />
   </component>
