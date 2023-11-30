@@ -16,13 +16,13 @@ public enum State {
 }
 
 public class Health : MonoBehaviour, IDamageable, IHealable {
-    public float maxHealth = 100f;
-    public float currentHealth;
+    [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private float currentHealth;
     public State state;
 
     // Regeneration parameters
-    public bool canRegenerate = false;
-    public float regenerationRate = 5f;
+    [SerializeField] private bool canRegenerate = false;
+    [SerializeField] private float regenerationRate = 5f;
 
     // Declare events to signal state changes
     public UnityEvent OnDeath;
@@ -79,7 +79,10 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
     private void HandleDeath() {
         Debug.Log("The object is dead.");
         OnDeath.Invoke();
+<<<<<<< HEAD
         //GameOverUI.Instance.Show();
+=======
+>>>>>>> dev
         Destroy(gameObject);
     }
 
@@ -102,6 +105,17 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
                 HandleDeath();
                 break;
         }
+    }
+
+    public void ToggleCanRegenerate() {
+        canRegenerate = !canRegenerate;
+    }
+
+    public void SetRegenerateRate(float regenRate) {
+        regenerationRate = regenRate;
+    }
+    public float GetMaxHealth() {
+        return maxHealth;
     }
 
     public void Spawn(float? health = null) {

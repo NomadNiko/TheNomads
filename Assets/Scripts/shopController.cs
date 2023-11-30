@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System.Linq;
 using TMPro;
 
-public class shopController : MonoBehaviour
+public class ShopController : MonoBehaviour
 {
     // Start is called before the first frame update
 

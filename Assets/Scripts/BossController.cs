@@ -18,11 +18,10 @@ public class BossController : MonoBehaviour {
     private float travelTime = 5.0f;
     private float attackCd = 3.0f;
     private float lastAttack = 0.0f;
-    private float panAttackDamage = 20f;
     private bool movementLock = false;
 
     void Start() {
-        pan = GameObject.Find("Pan");
+        pan = GameObject.Find("Wok");
         panHitBox = pan.GetComponent<HitBox>();
         anim = pan.GetComponent<Animation>();
 
@@ -41,10 +40,15 @@ public class BossController : MonoBehaviour {
         }
 
         if (Time.time - lastAttack > attackCd && player != null) {
-            int chosenAttack = Random.Range(0, 2);
-            if (chosenAttack == 1) {
+            int chosenAttack = Random.Range(0, 4);
+            if (chosenAttack == 0) {
                 ShootFirework(player.transform.position);
-            } else {
+            }else if (chosenAttack == 1){
+                for (int i=0; i < 6; i++){ //Shoot 6 fireworks in a circle around the player, at a range of 20. TODO: Unhardcode these
+                    Vector3 attackVector = transform.position + Quaternion.Euler(0,60*i,0)*Vector3.forward*20;
+                    ShootFirework(attackVector);
+                }
+            }else {
                 PanSlam();
             }
             lastAttack = Time.time;
@@ -53,7 +57,7 @@ public class BossController : MonoBehaviour {
         movementLock = !panHitBox.isComplete;
 
         // Check boss health and destroy if it's zero
-        if (health.currentHealth <= 0) {
+        if (health.GetHealth() <= 0) {
             Destroy(gameObject);
         }
 
@@ -77,6 +81,7 @@ public class BossController : MonoBehaviour {
     }
 
     void PanSlam() {
+        //TODO: Make the boss stop during the telegraph and make it faster
         anim.Play("PanSlam");
 
         panHitBox.canDamage = true;

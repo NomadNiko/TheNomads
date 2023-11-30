@@ -39,8 +39,8 @@ public class VendingMachine : MonoBehaviour {
 
     // Method to handle healing based on the selected item
     private void HandleHealing() {
-        int selectedItemRow = GetComponent<shopController>().selected[0];
-        int selectedItemColumn = GetComponent<shopController>().selected[1];
+        int selectedItemRow = GetComponent<ShopController>().selected[0];
+        int selectedItemColumn = GetComponent<ShopController>().selected[1];
 
         // Assuming that 10% of total health is the healing value for A1
         float percentageHeal = 0.1f;
@@ -50,13 +50,13 @@ public class VendingMachine : MonoBehaviour {
                 switch (selectedItemColumn) {
                     case 0: // A1
                         // Heal by 10% of total health, up to 100%
-                        float healAmount = player.GetComponent<Health>().maxHealth * percentageHeal;
-                        player.GetComponent<Health>().Heal(Mathf.Min(healAmount, player.GetComponent<Health>().maxHealth));
+                        float healAmount = player.GetComponent<Health>().GetMaxHealth() * percentageHeal;
+                        player.GetComponent<Health>().Heal(Mathf.Min(healAmount, player.GetComponent<Health>().GetMaxHealth()));
                         break;
 
                     case 1: // A2
                         // Heal to 100% of total health
-                        player.GetComponent<Health>().Heal(player.GetComponent<Health>().maxHealth);
+                        player.GetComponent<Health>().Heal(player.GetComponent<Health>().GetMaxHealth());
                         break;
 
                         // Handle other columns if needed

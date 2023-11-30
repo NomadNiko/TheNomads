@@ -28,7 +28,7 @@ public class FireworkAttack : MonoBehaviour {
             // Set the explosion damage in the HitBox script
             explosionHitBox.gameObject.GetComponent<HitBox>().explosionDamage = explosionDamage;
             explosionHitBox.gameObject.GetComponent<HitBox>().canDamage = true;
-            Invoke("EndExplosion", 0.1f);
+            Invoke("EndExplosion", 0.5f);
             warning.SetActive(false);
             gameObject.SetActive(false);
         }
