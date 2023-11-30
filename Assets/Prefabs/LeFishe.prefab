@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 7352616402090938073}
   - component: {fileID: 8917700576273577889}
   - component: {fileID: 4420885839227229387}
+  - component: {fileID: 6148497687952718643}
   - component: {fileID: -3169064390106765608}
   - component: {fileID: 7305165211767582404}
   - component: {fileID: 6674339328331121383}
@@ -429,6 +430,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 15
   hitbox: {fileID: 5030375178983237198}
+--- !u!114 &6148497687952718643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2838850415429382975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b5ace36f069547b5d3652dc5c40e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scales: 30
 --- !u!114 &-3169064390106765608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,9 +514,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2.2751355
-  m_Height: 8.067852
+  m_Height: 7.4487615
   m_Direction: 1
-  m_Center: {x: 0.11012268, y: 3.673174, z: 0.16192245}
+  m_Center: {x: 0.11012268, y: 3.9827192, z: 0.16192245}
 --- !u!54 &2041100613647132197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -549,8 +563,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 10, z: 5}
-  m_Center: {x: 0, y: 5, z: 4}
+  m_Size: {x: 5, y: 9.931024, z: 3.9117985}
+  m_Center: {x: 0, y: 5.034488, z: 4.5441008}
 --- !u!1 &2850475549564194948
 GameObject:
   m_ObjectHideFlags: 0
