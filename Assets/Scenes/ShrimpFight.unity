@@ -543,6 +543,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeFishe
       objectReference: {fileID: 0}
+    - target: {fileID: 6674339328331121383, guid: c4fec55e85acc8b419cb9ede3e84e148,
+        type: 3}
+      propertyPath: regenerationRate
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7352616402090938073, guid: c4fec55e85acc8b419cb9ede3e84e148,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -824,6 +829,18 @@ MonoBehaviour:
   OnSpawn:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &918799649 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6674339328331121383, guid: c4fec55e85acc8b419cb9ede3e84e148,
+    type: 3}
+  m_PrefabInstance: {fileID: 519865083}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918799638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ecabd59f32684f49800eabf7eda0ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1032116126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,7 +1465,7 @@ MonoBehaviour:
   healthHeartImagePrefab: {fileID: 7079218208814127513, guid: 4589475d437337c44a179b0f01ff6e83,
     type: 3}
   container: {fileID: 102887371}
-  playersHealth: {fileID: 918799644}
+  playersHealth: {fileID: 918799649}
 --- !u!1001 &983654521346772629
 PrefabInstance:
   m_ObjectHideFlags: 0
