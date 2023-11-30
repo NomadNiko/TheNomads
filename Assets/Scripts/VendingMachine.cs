@@ -50,13 +50,13 @@ public class VendingMachine : MonoBehaviour {
                 switch (selectedItemColumn) {
                     case 0: // A1
                         // Heal by 10% of total health, up to 100%
-                        float healAmount = player.GetComponent<Health>().maxHealth * percentageHeal;
-                        player.GetComponent<Health>().Heal(Mathf.Min(healAmount, player.GetComponent<Health>().maxHealth));
+                        float healAmount = player.GetComponent<Health>().GetMaxHealth() * percentageHeal;
+                        player.GetComponent<Health>().Heal(Mathf.Min(healAmount, player.GetComponent<Health>().GetMaxHealth()));
                         break;
 
                     case 1: // A2
                         // Heal to 100% of total health
-                        player.GetComponent<Health>().Heal(player.GetComponent<Health>().maxHealth);
+                        player.GetComponent<Health>().Heal(player.GetComponent<Health>().GetMaxHealth());
                         break;
 
                         // Handle other columns if needed
