@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: dde596e08cb74a64e910a5a012139a5c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fireEffectPrefab: {fileID: 4629359815621638554, guid: 095a9b2da0bac634593b90a44089c4f7,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

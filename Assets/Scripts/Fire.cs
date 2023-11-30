@@ -2,29 +2,36 @@ using UnityEngine;
 
 public class FireEffect : MonoBehaviour
 {
-    public ParticleSystem fireParticles;
     public float damage = 10f; // Damage inflicted by the fire
-    public float radius = 5f;  // Radius of the fire's effect
-    public float duration = 3f; // Duration the fire lasts
+    public float duration = 10f; // Duration the fire lasts
+    public float burnDuration = 3f;
 
     private void Start()
     {
-        fireParticles.Play();
-        InvokeRepeating("DamageEnemies", 0f, 1f); // Damage every second
-        Destroy(gameObject, duration); // Destroy fire effect after duration
+        Destroy(gameObject, duration);
     }
 
-    private void DamageEnemies()
+    private void OnTriggerEnter(Collider other)
     {
-        // Find all colliders within the radius of the fire
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
-        foreach (var hitCollider in hitColliders)
+        AddBurnStatus(other);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        AddBurnStatus(other);
+    }
+
+    private void AddBurnStatus(Collider victim)
+    {
+        if (victim.CompareTag("Enemy") || (victim.CompareTag("Player"))) // hits enemies and player
         {
-            if (hitCollider.CompareTag("Enemy")) // Assuming enemies are tagged "Enemy"
+            OnFireStatus status = victim.GetComponent<OnFireStatus>();
+            if (status == null)
             {
-                // Apply damage to each enemy within the radius
-                
+                status = victim.gameObject.AddComponent<OnFireStatus>();
             }
+            
+            status.RefreshBurning(damage, burnDuration);
         }
     }
 }

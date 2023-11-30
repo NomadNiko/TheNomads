@@ -3,11 +3,6 @@ using UnityEngine;
 
 public class PlayerCollisionHandler : MonoBehaviour
 {
-    public void Update()
-    {
-        //Debug.Log(_hasSizeBuff);
-    }
-
     private bool _hasSizeBuff;
 
     private void OnCollisionEnter(Collision collision)
