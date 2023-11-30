@@ -79,10 +79,6 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
     private void HandleDeath() {
         Debug.Log("The object is dead.");
         OnDeath.Invoke();
-<<<<<<< HEAD
-        //GameOverUI.Instance.Show();
-=======
->>>>>>> dev
         Destroy(gameObject);
     }
 
