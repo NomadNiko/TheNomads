@@ -107,6 +107,9 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
     public void SetRegenerateRate(float regenRate) {
         regenerationRate = regenRate;
     }
+    public float GetMaxHealth() {
+        return maxHealth;
+    }
 
     public void Spawn(float? health = null) {
         if (state != State.PreSpawn) {
