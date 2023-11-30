@@ -18,7 +18,6 @@ public class BossController : MonoBehaviour {
     private float travelTime = 5.0f;
     private float attackCd = 3.0f;
     private float lastAttack = 0.0f;
-    private float panAttackDamage = 20f;
     private bool movementLock = false;
 
     void Start() {
