@@ -34,6 +34,9 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
     }
 
     private void Update() {
+        
+        //debug health
+        //Debug.Log(gameObject.name + " health: " + GetHealth());
         // Regenerate health over time
         if (canRegenerate && state == State.Alive) {
             currentHealth += regenerationRate * Time.deltaTime;
@@ -76,7 +79,7 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
     private void HandleDeath() {
         Debug.Log("The object is dead.");
         OnDeath.Invoke();
-        GameOverUI.Instance.Show();
+        //GameOverUI.Instance.Show();
         Destroy(gameObject);
     }
 

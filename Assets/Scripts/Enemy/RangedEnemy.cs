@@ -21,24 +21,27 @@ public class ProjectileEnemy : MonoBehaviour
     
     void Update()
     {
-        float distance = Vector3.Distance(transform.position, playerTransform.position);
-        bool clearLineOfSight = Physics.Raycast(transform.position, playerTransform.position - transform.position, out var hit) && hit.transform == playerTransform;
+        if (playerTransform != null)
+        {
+            float distance = Vector3.Distance(transform.position, playerTransform.position);
+            bool clearLineOfSight = Physics.Raycast(transform.position, playerTransform.position - transform.position, out var hit) && hit.transform == playerTransform;
 
-        if (distance <= _agent.stoppingDistance && clearLineOfSight)
-        {
-            // Stop and fire at the player
-            _agent.isStopped = true;
-            if (Time.time > _lastFireTime + firingRate)
+            if (distance <= _agent.stoppingDistance && clearLineOfSight)
             {
-                FireProjectile();
-                _lastFireTime = Time.time;
+                // Stop and fire at the player
+                _agent.isStopped = true;
+                if (Time.time > _lastFireTime + firingRate)
+                {
+                    FireProjectile();
+                    _lastFireTime = Time.time;
+                }
             }
-        }
-        else
-        {
-            // Keep chasing the player
-            _agent.isStopped = false;
-            _agent.SetDestination(playerTransform.position);
+            else
+            {
+                // Keep chasing the player
+                _agent.isStopped = false;
+                _agent.SetDestination(playerTransform.position);
+            }
         }
     }
 
@@ -52,7 +55,6 @@ public class ProjectileEnemy : MonoBehaviour
 
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         rb.velocity = projectilePath * speed;
-        //add damage stuff
     }
 }
 

@@ -148,5 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 084131a6795520547b3a4f5f782d41ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireEffectPrefab: {fileID: 0}
-  radius: 5
+  fireEffectPrefab: {fileID: 4629359815621638554, guid: 1cf93844670635c4b9f06ba6547a7e1b,
+    type: 3}
+  minVelocity: 1
