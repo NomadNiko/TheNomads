@@ -39,8 +39,8 @@ public class VendingMachine : MonoBehaviour {
 
     // Method to handle healing based on the selected item
     private void HandleHealing() {
-        int selectedItemRow = GetComponent<shopController>().selected[0];
-        int selectedItemColumn = GetComponent<shopController>().selected[1];
+        int selectedItemRow = GetComponent<ShopController>().selected[0];
+        int selectedItemColumn = GetComponent<ShopController>().selected[1];
 
         // Assuming that 10% of total health is the healing value for A1
         float percentageHeal = 0.1f;
