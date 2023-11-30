@@ -78,8 +78,15 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
 
     private void HandleDeath() {
         Debug.Log("The object is dead.");
+        Scales scalecount = FindObjectOfType<Scales>();
+        int ScaleAmount = Random.Range(6, 11);
+        if (scalecount != null)
+        {
+            scalecount.AddScales(ScaleAmount);
+        }
         OnDeath.Invoke();
         Destroy(gameObject);
+        
     }
 
     public void SetState(State newState) {
