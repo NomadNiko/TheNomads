@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour {
 
     private void PlayerDeathCheck() {
         // Trigger game over if players Health reaches 0
-        if (player != null && player.GetComponent<Health>() != null && player.GetComponent<Health>().GetHealth() <= 0) {
+        if (player == null) { //We were destroying the player and then trying to check its health. This is just the quickest work around
             GameOver();
         }
     }
