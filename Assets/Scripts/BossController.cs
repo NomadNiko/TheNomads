@@ -57,7 +57,7 @@ public class BossController : MonoBehaviour {
         movementLock = !panHitBox.isComplete;
 
         // Check boss health and destroy if it's zero
-        if (health.currentHealth <= 0) {
+        if (health.GetHealth() <= 0) {
             Destroy(gameObject);
         }
 
