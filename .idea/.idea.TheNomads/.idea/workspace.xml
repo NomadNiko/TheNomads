@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8902e87-6806-4673-bfe6-1881d737fdee" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheNomads/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/big pot/big_pot.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/big pot/big_pot.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/cutting board/cutting_board.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/cutting board/cutting_board.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/small knife/asset data/small knife.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/accessories/small knife/asset data/small knife.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/small pot/asset data/sauce pan.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/accessories/small pot/asset data/sauce pan.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Import/props/accessories/spoon/asset data/spoon.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Import/props/accessories/spoon/asset data/spoon.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene/NavMesh-NavMesh Surface 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene/NavMesh-NavMesh Surface 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene/NavMesh-NavMesh Surface 1.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene/NavMesh-NavMesh Surface 1.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene/NavMesh-NavMesh Surface.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene/NavMesh-NavMesh Surface.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene/NavMesh-NavMesh Surface.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene/NavMesh-NavMesh Surface.asset.meta" afterDir="false" />
-    </list>
+    <list default="true" id="f8902e87-6806-4673-bfe6-1881d737fdee" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,7 +106,7 @@
       <workItem from="1701139201173" duration="3363000" />
       <workItem from="1701274916878" duration="8579000" />
       <workItem from="1701338991610" duration="8280000" />
-      <workItem from="1701358050039" duration="1599000" />
+      <workItem from="1701358050039" duration="2034000" />
     </task>
     <servers />
   </component>
