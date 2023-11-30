@@ -26,7 +26,7 @@ public class FireworkAttack : MonoBehaviour {
         if (collider.gameObject.tag == "Ground") {
             explosionHitBox = Instantiate(explosion, transform.position, transform.rotation);
             // Set the explosion damage in the HitBox script
-            explosionHitBox.gameObject.GetComponent<HitBox>().explosionDamage = explosionDamage;
+            explosionHitBox.gameObject.GetComponent<HitBox>().damage = explosionDamage;
             explosionHitBox.gameObject.GetComponent<HitBox>().canDamage = true;
             Invoke("EndExplosion", 0.5f);
             warning.SetActive(false);

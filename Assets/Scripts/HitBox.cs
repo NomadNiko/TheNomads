@@ -5,7 +5,7 @@ using UnityEngine;
 public class HitBox : MonoBehaviour {
     public bool canDamage;
     public bool isComplete;
-    public float explosionDamage = 20; // Added variable for explosion damage
+    public float damage = 20; // Added variable for explosion damage
 
     // Start is called before the first frame update
     void Start() {
@@ -25,10 +25,10 @@ public class HitBox : MonoBehaviour {
 
             if (playerHealth != null) {
                 // Apply damage to the player
-                playerHealth.TakeDamage(explosionDamage);
+                playerHealth.TakeDamage(damage);
 
                 // For debugging, print the damage applied
-                Debug.Log($"Player took damage: {explosionDamage}");
+                Debug.Log($"Player took damage: {damage}");
             } else {
                 Debug.LogWarning("Player object does not have a Health component.");
             }
