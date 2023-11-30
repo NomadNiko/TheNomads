@@ -14,6 +14,6 @@ public class Scales : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Scales: " + scales);
+        //Debug.Log("Scales: " + scales);
     }
 }

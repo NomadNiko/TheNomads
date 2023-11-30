@@ -46,6 +46,7 @@ public class BossController : MonoBehaviour {
             }else if (chosenAttack == 1){
                 for (int i=0; i < 6; i++){ //Shoot 6 fireworks in a circle around the player, at a range of 20. TODO: Unhardcode these
                     Vector3 attackVector = transform.position + Quaternion.Euler(0,60*i,0)*Vector3.forward*20;
+                    attackVector.y = player.transform.position.y;
                     ShootFirework(attackVector);
                 }
             }else {
