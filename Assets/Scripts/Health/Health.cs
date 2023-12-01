@@ -85,6 +85,15 @@ public class Health : MonoBehaviour, IDamageable, IHealable {
             scalecount.AddScales(ScaleAmount);
         }
         OnDeath.Invoke();
+
+        if (gameObject.CompareTag("Enemy"))
+        {
+            EnemySpawner spawner = FindObjectOfType<EnemySpawner>();
+            if (spawner != null)
+            {
+                spawner.EnemyDefeated();
+            }
+        }
         Destroy(gameObject);
         
     }

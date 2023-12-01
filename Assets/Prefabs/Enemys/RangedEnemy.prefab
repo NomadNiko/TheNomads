@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 7718481224601363890}
   - component: {fileID: 4783805533630911003}
   - component: {fileID: 390269705035660880}
-  - component: {fileID: 6948040465078082277}
+  - component: {fileID: 656165380132150973}
   - component: {fileID: 1332080931331184373}
+  - component: {fileID: 6948040465078082277}
   - component: {fileID: 2222821141652136298}
   m_Layer: 0
   m_Name: RangedEnemy
@@ -108,8 +109,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.97727, y: 8.712053, z: 5.139456}
+  m_Center: {x: -0.0160532, y: 3.8560266, z: -0.69642544}
 --- !u!54 &390269705035660880
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -137,7 +138,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6948040465078082277
+--- !u!114 &656165380132150973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,15 +147,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4078676912409814455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 943b98f6ff89edb46abe24b61ca82374, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d13ac16f35c0dc42a5cb999d2a7fd85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
-  projectilePrefab: {fileID: 6365249260072095067, guid: 3d6b726f3e9d5c84287f1e77d4616885,
-    type: 3}
-  firingRate: 1
-  speed: 60
-  heightOffset: 4
 --- !u!114 &1332080931331184373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +173,24 @@ MonoBehaviour:
   OnSpawn:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6948040465078082277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4078676912409814455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943b98f6ff89edb46abe24b61ca82374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  projectilePrefab: {fileID: 9033240261829714773, guid: cd9e6ba8a49c58c4ea76f89e1bb7e627,
+    type: 3}
+  firingRate: 1
+  speed: 60
+  heightOffset: 4
 --- !u!195 &2222821141652136298
 NavMeshAgent:
   m_ObjectHideFlags: 0

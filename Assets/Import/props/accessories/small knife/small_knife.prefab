@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5465582425827805322}
   - component: {fileID: 9215503823506019277}
   - component: {fileID: 8574879575216885503}
+  - component: {fileID: 1649409096398079173}
   m_Layer: 0
   m_Name: small_knife
   m_TagString: PickupAble
@@ -133,3 +134,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.000842102, y: 0.0005117873, z: 0.008710212}
   m_Center: {x: 0.0000000013387763, y: 2.910383e-11, z: 0.000000016298147}
+--- !u!114 &1649409096398079173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3805988271462256411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b378c63e7e2f554a98d1381f478d8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100

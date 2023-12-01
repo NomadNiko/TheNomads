@@ -1,27 +1,33 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    // Enemy related methods and properties
-    //Navigation
-
-    public Transform player;
+    private Transform player;
     private NavMeshAgent _agent;
 
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
+        if (player != null) {
+            _agent.destination = player.position;
+        }
     }
 
     private void Update()
     {
-        _agent.destination = player.position;
+        if (player != null) {
+            _agent.destination = player.position;
+        }
     }
 
+    public void SetTarget(Transform newTarget) {
+        player = newTarget;
+        if (_agent != null) {
+            _agent.destination = player.position;
+        }
+    }
+    
     public void Flatten()
     {
         //Debug.Log("has been flattened");

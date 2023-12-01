@@ -293,6 +293,7 @@ GameObject:
   - component: {fileID: 9101862154970117127}
   - component: {fileID: -1019169552251251140}
   - component: {fileID: -6383802400223214699}
+  - component: {fileID: 4255438446557269409}
   m_Layer: 0
   m_Name: big_pot
   m_TagString: PickupAble
@@ -365,3 +366,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.043033637, y: 0.04244603, z: 0.036550336}
   m_Center: {x: 0.00004587368, y: -0.00016504891, z: 0.00046506218}
+--- !u!114 &4255438446557269409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9173756245274054286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b378c63e7e2f554a98d1381f478d8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
