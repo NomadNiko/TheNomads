@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aabf24f5303075d4c8a01ce370bb79d0, type: 3}
   m_Name: SoundList
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - SoundName: TheNomadsTheme01
+    AudioClip: {fileID: 8300000, guid: 546cdf48cb2d6974f900df49d9f0cafd, type: 3}
+  - SoundName: FightMusic01
+    AudioClip: {fileID: 8300000, guid: 8f8999172c3b0e94d974d46528717bab, type: 3}
