@@ -9,7 +9,10 @@ public class VendingMachine : MonoBehaviour {
     public int itemCount = 4;
     public List<int> usedSlots = new List<int>();
 
-    private float detectRange = 10.0f;
+    private float detectRange = 20.0f;
+
+    private float buyCd = 20.0f;
+    private float lastBuy = -20.0f;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject player; //Will need this to check proximity so only opens when we mean it to
 
@@ -32,30 +35,34 @@ public class VendingMachine : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         // You can add any update logic here if needed
-        if (Vector3.Distance(player.transform.position, transform.position) < detectRange){
+        if (Vector3.Distance(player.transform.position, transform.position) < detectRange && !(Time.time - lastBuy < buyCd)){
             buyPrompt.SetActive(true);
-        } else if (buyPrompt.activeInHierarchy && Vector3.Distance(player.transform.position, transform.position) > detectRange) {
+        } else if ((buyPrompt.activeInHierarchy && Vector3.Distance(player.transform.position, transform.position) > detectRange) ||Time.time - lastBuy < buyCd) {
             buyPrompt.SetActive(false);
         }
+
     }
 
     // Open when the interact button is pressed (currently E)
     public void OnInteract() {
-        if (player.GetComponent<Scales>().scales >= 5 && Vector3.Distance(player.transform.position, transform.position) < detectRange){
-            player.GetComponent<Scales>().AddScales(-5);
-            int itemBought = Random.Range(0,5);
-            Vector3 spawnLoc = new Vector3(Random.Range(-20.0f, 20.0f), 1.5f, Random.Range(-20.0f, 20.0f)); //change depending on level layout
-            if (itemBought == 0){
-                player.GetComponent<Health>().Heal(20); //Heal for 20
-            } else if (itemBought == 1){ //Create different powerups
-                Instantiate(speedPowerup, spawnLoc, Quaternion.identity);
-            } else if (itemBought == 2){
-                Instantiate(sizePowerup, spawnLoc, Quaternion.identity);
-            } else if (itemBought == 3){
-                Instantiate(molotov, spawnLoc, Quaternion.identity);
-            } else if (itemBought == 4){
-                Instantiate(projectile, spawnLoc, Quaternion.identity);
+        if (Time.time - lastBuy > buyCd){
+            if (player.GetComponent<Scales>().scales >= 5 && Vector3.Distance(player.transform.position, transform.position) < detectRange){
+                player.GetComponent<Scales>().AddScales(-5);
+                int itemBought = Random.Range(0,5);
+                Vector3 spawnLoc = transform.position + Vector3.forward*-20; //change depending on level layout
+                if (itemBought == 0){
+                    player.GetComponent<Health>().Heal(20); //Heal for 20
+                } else if (itemBought == 1){ //Create different powerups
+                    Instantiate(speedPowerup, spawnLoc, Quaternion.identity);
+                } else if (itemBought == 2){
+                    Instantiate(sizePowerup, spawnLoc, Quaternion.identity);
+                } else if (itemBought == 3){
+                    Instantiate(molotov, spawnLoc, Quaternion.identity);
+                } else if (itemBought == 4){
+                    Instantiate(projectile, spawnLoc, Quaternion.identity);
+                }
             }
+            lastBuy = Time.time;
         }
     }
 

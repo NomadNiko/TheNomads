@@ -370,7 +370,6 @@ GameObject:
   - component: {fileID: 3232771607825840195}
   - component: {fileID: 2041100613647132197}
   - component: {fileID: -8743644286597322490}
-  - component: {fileID: 542244223498715148}
   m_Layer: 8
   m_Name: LeFishe
   m_TagString: Player
@@ -566,29 +565,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 9.931024, z: 3.9117985}
   m_Center: {x: 0, y: 5.034488, z: 4.5441008}
---- !u!114 &542244223498715148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2838850415429382975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ecabd59f32684f49800eabf7eda0ae7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
-  state: 1
-  canRegenerate: 0
-  regenerationRate: 5
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSpawn:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &2850475549564194948
 GameObject:
   m_ObjectHideFlags: 0
