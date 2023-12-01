@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ShopItem
+  - Ground
+  - PickupAble
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -11,10 +15,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Enemies
+  - Projectiles
+  - Player
+  - Door Layer
   - 
   - 
   - 
