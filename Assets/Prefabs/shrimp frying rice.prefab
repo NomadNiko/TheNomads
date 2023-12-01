@@ -1,5 +1,174 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3227796901901875288
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4987645549042470712}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.62
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6803169544883306252, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7144393
+      objectReference: {fileID: 0}
+    - target: {fileID: -6803169544883306252, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00012878915
+      objectReference: {fileID: 0}
+    - target: {fileID: -6803169544883306252, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.48658255
+      objectReference: {fileID: 0}
+    - target: {fileID: -6803169544883306252, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5122634
+      objectReference: {fileID: 0}
+    - target: {fileID: -6803169544883306252, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.487385
+      objectReference: {fileID: 0}
+    - target: {fileID: -6803169544883306252, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5131077
+      objectReference: {fileID: 0}
+    - target: {fileID: -6803169544883306252, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 87.055
+      objectReference: {fileID: 0}
+    - target: {fileID: -6803169544883306252, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 89.906
+      objectReference: {fileID: 0}
+    - target: {fileID: -6803169544883306252, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180.001
+      objectReference: {fileID: 0}
+    - target: {fileID: -3432401550182100168, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.000018684426
+      objectReference: {fileID: 0}
+    - target: {fileID: -3432401550182100168, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000040978193
+      objectReference: {fileID: 0}
+    - target: {fileID: -3432401550182100168, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.85124725
+      objectReference: {fileID: 0}
+    - target: {fileID: -3432401550182100168, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5247627
+      objectReference: {fileID: 0}
+    - target: {fileID: -3432401550182100168, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0015040637
+      objectReference: {fileID: 0}
+    - target: {fileID: -3432401550182100168, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00004655123
+      objectReference: {fileID: 0}
+    - target: {fileID: -3432401550182100168, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 63.304
+      objectReference: {fileID: 0}
+    - target: {fileID: -3432401550182100168, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.333
+      objectReference: {fileID: 0}
+    - target: {fileID: -3432401550182100168, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.211
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_Name
+      value: shrimp frying rice (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21690bfcd1aecc6438910cf257129284,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 21690bfcd1aecc6438910cf257129284, type: 3}
+--- !u!4 &3116993776481656755 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21690bfcd1aecc6438910cf257129284,
+    type: 3}
+  m_PrefabInstance: {fileID: 3227796901901875288}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4809022306611456211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64,12 +233,24 @@ PrefabInstance:
       value: shrimp frying rice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5646614672220020636, guid: 9190aa11f5a126e418a75f65c328ed14, type: 3}
+    - {fileID: 3070237301140633329, guid: 9190aa11f5a126e418a75f65c328ed14, type: 3}
+    - {fileID: -8129948107777507534, guid: 9190aa11f5a126e418a75f65c328ed14, type: 3}
+    - {fileID: 2123755257805532035, guid: 9190aa11f5a126e418a75f65c328ed14, type: 3}
+    - {fileID: 6242189739024707668, guid: 9190aa11f5a126e418a75f65c328ed14, type: 3}
+    - {fileID: 2968446498695991139, guid: 9190aa11f5a126e418a75f65c328ed14, type: 3}
+    - {fileID: 5721964499724258333, guid: 9190aa11f5a126e418a75f65c328ed14, type: 3}
+    - {fileID: 6783318756803745747, guid: 9190aa11f5a126e418a75f65c328ed14, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9190aa11f5a126e418a75f65c328ed14,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5378665687750064400}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9190aa11f5a126e418a75f65c328ed14,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3116993776481656755}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9190aa11f5a126e418a75f65c328ed14,
         type: 3}
@@ -308,7 +489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canDamage: 0
   isComplete: 0
-  explosionDamage: 0
+  damage: 20
 --- !u!111 &7167734050291979267
 Animation:
   m_ObjectHideFlags: 0
@@ -340,7 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canDamage: 0
   isComplete: 0
-  explosionDamage: 0
+  damage: 20
 --- !u!64 &4751263489851083044
 MeshCollider:
   m_ObjectHideFlags: 0
