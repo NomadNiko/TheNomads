@@ -40,7 +40,7 @@ public class BossController : MonoBehaviour {
         }
 
         if (Time.time - lastAttack > attackCd && player != null) {
-            int chosenAttack = Random.Range(0, 2);
+            int chosenAttack = Random.Range(0, 4);
             if (chosenAttack == 0) {
                 ShootFirework(player.transform.position);
             }else if (chosenAttack == 1){
