@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: -6383802400223214699}
   m_Layer: 0
   m_Name: big_pot
-  m_TagString: Untagged
+  m_TagString: PickupAble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
