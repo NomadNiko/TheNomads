@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 // Define the Wave class
@@ -26,7 +27,7 @@ public class EnemySpawner : MonoBehaviour {
     }
     
     void Update() {
-        Debug.Log("Current Enemies: " + _activeEnemies);
+        //Debug.Log("Current Enemies: " + _activeEnemies);
         // Check if it's time to start a new wave
         if (!_isWaitingForWaveEnd && _waveCountdown <= 0f && _activeEnemies <= 0) {
             if (_currentWaveIndex < waves.Length) {
@@ -34,6 +35,10 @@ public class EnemySpawner : MonoBehaviour {
             }
         } else {
             _waveCountdown -= Time.deltaTime;
+        }
+
+        if (_currentWaveIndex == waves.Length && _activeEnemies == 0 && _isWaitingForWaveEnd == false){
+            SceneManager.LoadScene("ShrimpFight");
         }
     }
 
@@ -75,4 +80,6 @@ public class EnemySpawner : MonoBehaviour {
     {
         _activeEnemies--;
     }
+
+
 }
