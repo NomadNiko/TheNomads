@@ -16,6 +16,10 @@ public class ProjectileEnemy : MonoBehaviour
 
     void Start()
     {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null) {
+            playerTransform = player.transform;
+        }
         _agent = GetComponent<NavMeshAgent>();
     }
     
