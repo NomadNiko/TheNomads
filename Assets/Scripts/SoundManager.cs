@@ -8,12 +8,13 @@ public class SoundManager : MonoBehaviour {
     private static SoundManager instance;
     public static SoundManager Instance { get { return instance; } }
 
-    private SoundList soundList;
+    [SerializeField] private SoundList soundList;
+
     private Dictionary<string, AudioClip> soundDict = new Dictionary<string, AudioClip>();
     private AudioSource audioSource;
 
     private void Awake() {
-        soundList = FindObjectOfType<SoundList>();
+        
         audioSource = GetComponent<AudioSource>();
         SetInstance();
         InitializeSoundList();

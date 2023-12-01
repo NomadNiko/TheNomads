@@ -9,6 +9,9 @@ public class GameController : MonoBehaviour {
     void Start() {
         // Find the player GameObject in the scene
         player = GameObject.FindWithTag("Player");
+
+        // Start the Level Music
+        SoundManager.Instance.PlaySound("FightMusic01", 90f, 100);
     }
 
     void Update() {
@@ -19,7 +22,7 @@ public class GameController : MonoBehaviour {
         // Trigger game over if players Health reaches 0
         if (player == null) { //We were destroying the player and then trying to check its health. This is just the quickest work around
             GameOver();
-        }
+        } 
     }
     
     public void PauseGame() {

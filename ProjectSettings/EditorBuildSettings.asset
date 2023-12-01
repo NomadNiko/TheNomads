@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 9767352aaa6c74746a0e7f3e6ffc3793
+  - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/ShrimpFight.unity
+    guid: c1330e4bd2d80734aa7bb6cf69d39aa4
   m_configObjects: {}
