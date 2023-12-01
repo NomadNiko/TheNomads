@@ -17,7 +17,7 @@ public class MainMenuUI : MonoBehaviour {
 
     private void StartGame() {
         // Load the GameScene
-        SceneManager.LoadScene("ShrimpFight");
+        SceneManager.LoadScene("GameScene");
     }
 
     private void ExitGame() {

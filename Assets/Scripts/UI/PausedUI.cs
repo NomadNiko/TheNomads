@@ -39,7 +39,7 @@ public class PausedUI : MonoBehaviour {
 
     // Method to restart the level
     public void RestartGame() {
-        SceneManager.LoadScene("ShrimpFight"); //This wasn't working in thje gameover scene.
+        SceneManager.LoadScene("GameScene"); //This wasn't working in thje gameover scene.
     }
 
     // Method to exit to main menu
