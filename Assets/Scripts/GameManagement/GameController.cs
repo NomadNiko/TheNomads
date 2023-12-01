@@ -10,7 +10,7 @@ public enum GameState {
 }
 
 public class GameController : MonoBehaviour {
-    [SerializeField] private BossController boss;
+    //[SerializeField] private BossController boss;
     [SerializeField] private GameOverUI gameOverUI;
     [SerializeField] private PausedUI pausedUI;
     [SerializeField] private GameObject pressSpaceUI;
@@ -88,6 +88,7 @@ public class GameController : MonoBehaviour {
             case GameState.Playing:
                 Time.timeScale = 1f;
                 pressSpaceUI.SetActive(false);
+                pausedUI.Hide();
                 break;
             case GameState.Paused:
                 Time.timeScale = 0f;
