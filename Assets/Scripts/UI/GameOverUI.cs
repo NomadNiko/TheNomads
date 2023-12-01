@@ -47,11 +47,11 @@ public class GameOverUI : MonoBehaviour {
     
     private void StartGame() {
         // Load the GameScene
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("ShrimpFight");
     }
 
     private void ExitGame() {
         // Exit the game
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 }
