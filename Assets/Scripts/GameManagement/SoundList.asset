@@ -23,3 +23,5 @@ MonoBehaviour:
     AudioClip: {fileID: 8300000, guid: 50b2f43dd1071e947b29c8078ab0e899, type: 3}
   - SoundName: FishSwing2
     AudioClip: {fileID: 8300000, guid: dc5ae3fc07d70a64cb68e18510d2f2b8, type: 3}
+  - SoundName: FireWork
+    AudioClip: {fileID: 8300000, guid: 8751a8015caaab646b2718e54cf7d921, type: 3}

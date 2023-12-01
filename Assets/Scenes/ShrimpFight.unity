@@ -1483,6 +1483,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeFishe
       objectReference: {fileID: 0}
+    - target: {fileID: 5030375178983237198, guid: c4fec55e85acc8b419cb9ede3e84e148,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6674339328331121383, guid: c4fec55e85acc8b419cb9ede3e84e148,
         type: 3}
       propertyPath: regenerationRate
@@ -1538,14 +1543,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7465019547703448082, guid: c4fec55e85acc8b419cb9ede3e84e148,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2838850415429382975, guid: c4fec55e85acc8b419cb9ede3e84e148,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 918799644}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4fec55e85acc8b419cb9ede3e84e148, type: 3}
 --- !u!1 &523597618
 GameObject:
@@ -2688,29 +2694,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 519865083}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &918799644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918799638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ecabd59f32684f49800eabf7eda0ae7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
-  state: 1
-  canRegenerate: 0
-  regenerationRate: 5
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSpawn:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &918799649 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6674339328331121383, guid: c4fec55e85acc8b419cb9ede3e84e148,
@@ -5721,6 +5704,11 @@ PrefabInstance:
         type: 3}
       propertyPath: currentHealth
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732035642572323795, guid: 17c690699a256ec47868fdbb336b3c2c,
+        type: 3}
+      propertyPath: regenerationRate
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4149538691142621119, guid: 17c690699a256ec47868fdbb336b3c2c,
         type: 3}

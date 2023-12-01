@@ -15,7 +15,9 @@ public class HitBoxAttack : MonoBehaviour {
         if (canAttack) {
 
             float damageAmount = damage[comboNum];
-            collider.gameObject.GetComponent<Health>().TakeDamage(damageAmount);
+            if (collider.gameObject.tag != "Player"){
+                collider.gameObject.GetComponent<Health>().TakeDamage(damageAmount);
+            }
         }
         canAttack = false;
     }
