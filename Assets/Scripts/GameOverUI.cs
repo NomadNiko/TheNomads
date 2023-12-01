@@ -1,7 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameOverUI : MonoBehaviour {
     private static GameOverUI instance;
+
+    [SerializeField] private Button restartButton;
+    [SerializeField] private Button exitButton;
 
     private void Start() {
         if (instance == null) {
@@ -11,6 +16,10 @@ public class GameOverUI : MonoBehaviour {
             Debug.LogWarning("Multiple instances of GameOverUI found. Only one instance is allowed.");
             Destroy(gameObject);
         }
+
+        // Attach functions to button clicks
+        restartButton.onClick.AddListener(StartGame);
+        exitButton.onClick.AddListener(ExitGame);
     }
 
     public static GameOverUI Instance {
@@ -33,5 +42,16 @@ public class GameOverUI : MonoBehaviour {
         } else {
             Debug.LogError("GameOverUI instance is null. Make sure the script is attached to a GameObject in the scene.");
         }
+    }
+
+    
+    private void StartGame() {
+        // Load the GameScene
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    private void ExitGame() {
+        // Exit the game
+        Application.Quit();
     }
 }
