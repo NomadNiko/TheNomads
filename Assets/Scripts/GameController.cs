@@ -1,10 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GameController : MonoBehaviour {
     [SerializeField] private BossController boss;
     [SerializeField] private GameOverUI gameOverUI;
+    [SerializeField] private PausedUI pausedUI;
     private GameObject player;
+    private PlayerInput input;
+
+    private bool isPaused = false;
 
     void Start() {
         // Find the player GameObject in the scene
@@ -12,10 +17,13 @@ public class GameController : MonoBehaviour {
 
         // Start the Level Music
         SoundManager.Instance.PlaySound("FightMusic01", 90f, 100);
+        input = new PlayerInput();
+        input.CharacterControls.Pause.performed += ctx => PauseGame();
     }
 
     void Update() {
         PlayerDeathCheck();
+        
     }
 
     private void PlayerDeathCheck() {
@@ -26,7 +34,14 @@ public class GameController : MonoBehaviour {
     }
     
     public void PauseGame() {
-        Time.timeScale = 0f; // Pause the game
+        Debug.Log("fdaskjhgf");
+        if (!isPaused) {
+            Time.timeScale = 0f; // Pause the game
+            pausedUI.Show();
+        }else{
+            Time.timeScale = 1f; // Unpause the game (I assume this is the correct val)
+            pausedUI.Hide();
+        }
     }
 
     private void GameOver() {
