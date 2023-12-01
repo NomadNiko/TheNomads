@@ -2,14 +2,33 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
+public enum GameState {
+    WaitingToStart,
+    Playing,
+    Paused,
+    GameOver
+}
+
 public class GameController : MonoBehaviour {
     [SerializeField] private BossController boss;
     [SerializeField] private GameOverUI gameOverUI;
     [SerializeField] private PausedUI pausedUI;
-    private GameObject player;
-    private PlayerInput input;
+    [SerializeField] private GameObject pressSpaceUI;
+    [SerializeField] private PlayerInput input;
 
-    private bool isPaused = false;
+    private GameObject player;
+    
+    private GameState gameState = GameState.WaitingToStart;
+
+    private void Awake() {
+        input = new PlayerInput();
+
+        // Check if the CharacterControls is not null before subscribing to events
+        if (input != null) {
+            input.CharacterControls.Pause.performed += ctx => HandlePauseInput();
+            input.CharacterControls.Attack_A.performed += ctx => HandleFirstInput();
+        }
+    }
 
     void Start() {
         // Find the player GameObject in the scene
@@ -17,37 +36,76 @@ public class GameController : MonoBehaviour {
 
         // Start the Level Music
         SoundManager.Instance.PlaySound("FightMusic01", 90f, 100);
-        input = new PlayerInput();
-        input.CharacterControls.Pause.performed += ctx => PauseGame();
+
+
+        // Initialize the game state
+        SetGameState(GameState.WaitingToStart);
     }
 
+
+
+
+
     void Update() {
-        PlayerDeathCheck();
-        
+        if (gameState == GameState.Playing) {
+            // Update game-related logic for the Playing state
+            PlayerDeathCheck();
+        }
     }
 
     private void PlayerDeathCheck() {
         // Trigger game over if players Health reaches 0
-        if (player == null) { //We were destroying the player and then trying to check its health. This is just the quickest work around
-            GameOver();
-        } 
-    }
-    
-    public void PauseGame() {
-        Debug.Log("fdaskjhgf");
-        if (!isPaused) {
-            Time.timeScale = 0f; // Pause the game
-            pausedUI.Show();
-        }else{
-            Time.timeScale = 1f; // Unpause the game (I assume this is the correct val)
-            pausedUI.Hide();
+        if (player == null) {
+            SetGameState(GameState.GameOver);
         }
     }
 
-    private void GameOver() {
-        // Show GameOverUI and Pause Game
-        gameOverUI.Show();
-        PauseGame();
-        
+    private void HandleFirstInput() {
+        if (gameState == GameState.WaitingToStart) {
+            // Transition to Playing state when the Attack key is pressed
+            SetGameState(GameState.Playing);
+        }
+    }
+
+    private void HandlePauseInput() {
+        if (gameState == GameState.Playing) {
+            // Transition to Paused state when the Pause key is pressed
+            SetGameState(GameState.Paused);
+        } else if (gameState == GameState.Paused) {
+            // Transition back to Playing state when the Pause key is pressed again
+            SetGameState(GameState.Playing);
+        }
+    }
+
+    private void SetGameState(GameState newState) {
+        gameState = newState;
+
+        switch (newState) {
+            case GameState.WaitingToStart:
+                Time.timeScale = 0f;
+                pressSpaceUI.SetActive(true);
+                break;
+            case GameState.Playing:
+                Time.timeScale = 1f;
+                pressSpaceUI.SetActive(false);
+                break;
+            case GameState.Paused:
+                Time.timeScale = 0f;
+                pausedUI.Show();
+                break;
+            case GameState.GameOver:
+                Time.timeScale = 0f;
+                gameOverUI.Show();
+                break;
+        }
+    }
+    private void OnEnable() {
+        // Enable character controls on script enable
+        input.CharacterControls.Enable(); 
+    }
+
+    private void OnDisable() {
+        // Disable character controls on script disable
+        input.CharacterControls.Disable();
     }
 }
