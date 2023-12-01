@@ -40,7 +40,7 @@ public class BossController : MonoBehaviour {
         }
 
         if (Time.time - lastAttack > attackCd && player != null) {
-            int chosenAttack = Random.Range(0, 4);
+            int chosenAttack = Random.Range(0, 2);
             if (chosenAttack == 0) {
                 ShootFirework(player.transform.position);
             }else if (chosenAttack == 1){
@@ -67,7 +67,7 @@ public class BossController : MonoBehaviour {
     }
 
     void ShootFirework(Vector3 target) {
-        Rigidbody projectile = Instantiate(firework, transform.position, transform.rotation);
+        Rigidbody projectile = Instantiate(firework, transform.position + new Vector3(0,3,0), transform.rotation);
         GameObject tempWarning = Instantiate(warning, target + new Vector3(0, 0.1f, 0), transform.rotation);
         projectile.gameObject.GetComponent<FireworkAttack>().warning = tempWarning;
 
