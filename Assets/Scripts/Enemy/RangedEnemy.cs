@@ -8,6 +8,7 @@ public class ProjectileEnemy : MonoBehaviour
     public float firingRate = 2.0f;
     public float speed = 2.0f;
     public float heightOffset = 5.0f;
+    private Animation anim;
     
 
     private NavMeshAgent _agent;
@@ -17,6 +18,7 @@ public class ProjectileEnemy : MonoBehaviour
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
+        anim = GetComponentsInChildren<Animation>()[0];
     }
     
     void Update()
@@ -48,6 +50,8 @@ public class ProjectileEnemy : MonoBehaviour
 
     private void FireProjectile()
     {
+        anim.Play("Throw");
+
         Vector3 spawnPosition = transform.position + transform.forward * SpawnOffset; //so it doesn't clash with the enemy collider
         GameObject projectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
         Vector3 targetPosition = playerTransform.position + new Vector3(0, heightOffset, 0);
