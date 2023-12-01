@@ -8,7 +8,7 @@ public class BossController : MonoBehaviour {
     [SerializeField] private GameObject player;
 
     private float rotationSpeed = 1f;
-    private float moveSpeed = 2.2f;
+    private float moveSpeed = 4f;
 
     private GameObject pan;
     private Animation anim;
