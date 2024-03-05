@@ -25,6 +25,3 @@ For this game, we wanted the experience to be creative and fun. Our focus was ma
 ![image](https://github.com/NomadNiko/TheNomads/assets/113329952/9edb3279-48b8-4993-a67c-4beab64176e6)
 
 ![image](https://github.com/NomadNiko/TheNomads/assets/113329952/c610aa3d-59b9-4e3a-9ce0-d7e0863c4bef)
-
-## How To Play
-To play our game, you can check it out at https://notunique3.itch.io/fryer-fisticuffs!
